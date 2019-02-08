@@ -1,4 +1,10 @@
 <resources>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
     <string name="app_name">Registration</string>
     <string name="n_a">N/A</string>
     <string name="name">Name</string>
@@ -6,4 +12,9 @@
     <string name="phone">Phone</string>
     <string name="address">Address</string>
     <string name="gender">Gender</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="large_text">rasel rasel rasel rasel rasel rasel rasel rasel </string>
+    <string name="registration">Registration</string>
+    <string name="all_user">ALL USER</string>
+
 </resources>

@@ -1,8 +1,10 @@
-package com.rasel.registration;
+package com.rasel.registration.model;
+
+import com.rasel.registration.model.UserInfo;
 
 import java.util.List;
 
-class AllUserResponse {
+public class AllUserResponse {
 
     private String Message, Status;
     private List<UserInfo> Data;

@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/ic_account_white_48dp"
-        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_color="@android:color/black"
         app:civ_border_width="2dp"
         app:civ_circle_background_color="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,10 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Name"
+        android:text="@string/name"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/circleImageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/tvNameValue"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/tvNameValue"
@@ -37,63 +38,73 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
         android:text="@string/n_a"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddressValue"
         app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/barrierLeft"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/tvAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Address"
+        android:textColor="@color/black"
+        android:text="@string/address"
         app:layout_constraintStart_toEndOf="@+id/circleImageView"
-        app:layout_constraintTop_toBottomOf="@id/tvName" />
+        app:layout_constraintTop_toTopOf="@+id/tvAddressValue" />
 
     <TextView
         android:id="@+id/tvAddressValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"
         android:text="@string/n_a"
+        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/barrierLeft"
-        app:layout_constraintTop_toTopOf="@+id/tvAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameValue" />
 
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Email"
+        android:text="@string/email"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/tvNameValue" />
 
     <TextView
         android:id="@+id/tvEmailValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/n_a"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrierRight"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/tvEmail" />
 
     <TextView
         android:id="@+id/tvPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Phone"
+        android:layout_marginTop="4dp"
+        android:text="@string/phone"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailValue" />
 
     <TextView
         android:id="@+id/tvPhoneValue"
@@ -101,18 +112,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/n_a"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrierRight"
-        app:layout_constraintTop_toTopOf="@+id/tvPhone" />
+        app:layout_constraintTop_toTopOf="@+id/tvPhone"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tvName"/>
+        app:layout_constraintStart_toStartOf="@id/tvName" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"

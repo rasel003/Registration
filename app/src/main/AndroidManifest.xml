@@ -12,16 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".All_User">
+        <activity android:name=".activity.Profile"
+            android:parentActivityName=".activity.All_User"/>
+        <activity android:name=".activity.All_User"
+            android:parentActivityName=".activity.Dashboard"/>
+
+        <activity android:name=".activity.Registration"
+            android:parentActivityName=".activity.Dashboard"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".activity.Dashboard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Registration" />
-        <activity android:name=".MainActivity"></activity>
+            </intent-filter></activity>
+
     </application>
 
 </manifest>

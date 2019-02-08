@@ -1,4 +1,4 @@
-package com.rasel.registration;
+package com.rasel.registration.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,11 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.rasel.registration.R;
+import com.rasel.registration.model.UserInfo;
+
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-class All_User_Adapter extends RecyclerView.Adapter<All_User_Adapter.ViewHolder> {
+public class All_User_Adapter extends RecyclerView.Adapter<All_User_Adapter.ViewHolder> {
     private Context context;
     private List<UserInfo> userInfoList;
     private OnItemClickListener listener;

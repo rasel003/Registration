@@ -1,15 +1,22 @@
-package com.rasel.registration;
+package com.rasel.registration.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import com.rasel.registration.R;
+import com.rasel.registration.adapter.All_User_Adapter;
+import com.rasel.registration.api.RetrofitClient;
+import com.rasel.registration.model.AllUserResponse;
+import com.rasel.registration.model.UserInfo;
+
 import java.util.List;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +33,9 @@ public class All_User extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_user);
+
+        Objects.requireNonNull(getSupportActionBar()).setTitle("User Info");
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         progressBar = findViewById(R.id.progressBar);
         recyclerView = findViewById(R.id.recyclerView);
@@ -59,7 +69,7 @@ public class All_User extends AppCompatActivity {
                             @Override
                             public void onItemClick(UserInfo userInfo) {
                                 Intent intent = new Intent(All_User.this, Profile.class);
-                                intent.putExtra("id", userInfo.getID());
+                                intent.putExtra("userInfo", userInfo);
                                 startActivity(intent);
                             }
                         });
