@@ -82,9 +82,9 @@ public class Registration extends AppCompatActivity {
     }
     public boolean validate() {
         name = etName.getText().toString();
-        email = etName.getText().toString();
-        phone = etName.getText().toString();
-        address = etName.getText().toString();
+        email = etEmail.getText().toString();
+        phone = etPhone.getText().toString();
+        address = etAddress.getText().toString();
         gender = spGender.getSelectedItem().toString();
 
         boolean valid = true;
@@ -116,9 +116,6 @@ public class Registration extends AppCompatActivity {
         }
         if (address.isEmpty()) {
             etAddress.setError("Password required");
-            valid = false;
-        } else if (address.length() < 5) {
-            etAddress.setError("Password length must be greater than 5 character");
             valid = false;
         } else {
             etAddress.setError(null);
