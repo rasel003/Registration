@@ -13,10 +13,6 @@ public class Profile extends AppCompatActivity {
     private static final String TAG = "Profile";
     private TextView tvNameValue, tvEmailValue, tvAddressValue, tvPhoneValue, tvGenderValue;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

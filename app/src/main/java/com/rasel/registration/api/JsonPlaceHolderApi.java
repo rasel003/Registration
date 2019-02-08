@@ -17,4 +17,6 @@ public interface JsonPlaceHolderApi {
     @POST("GetUserBy")
     Call<ResponseBody> getProfileInformation(@Body ApiProfileRequest body);
 
+
+
 }

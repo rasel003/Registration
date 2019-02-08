@@ -80,7 +80,6 @@ public class Registration extends AppCompatActivity {
             Log.d(TAG, "btnSignUpClicked: validation failed");
         }
     }
-
     public boolean validate() {
         name = etName.getText().toString();
         email = etName.getText().toString();

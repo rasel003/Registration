@@ -10,6 +10,7 @@ public class UserInfo implements Parcelable {
 
     private int ID;
 
+
     protected UserInfo(Parcel in) {
         Name = in.readString();
         Email = in.readString();

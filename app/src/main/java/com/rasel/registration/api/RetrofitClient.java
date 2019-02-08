@@ -17,6 +17,7 @@ public class RetrofitClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
+
     public static synchronized RetrofitClient getInstance(){
         if( retrofitClient==null){
             retrofitClient = new RetrofitClient();

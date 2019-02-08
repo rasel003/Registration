@@ -24,7 +24,6 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("Dashboard");
-
     }
 
     public void btnRegistrationClicked(View view) {

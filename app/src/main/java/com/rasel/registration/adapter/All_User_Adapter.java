@@ -24,7 +24,6 @@ public class All_User_Adapter extends RecyclerView.Adapter<All_User_Adapter.View
         this.context = context;
         this.userInfoList = userList;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -40,7 +39,6 @@ public class All_User_Adapter extends RecyclerView.Adapter<All_User_Adapter.View
         viewHolder.tvAddressValue.setText(userInfoList.get(i).getAddress());
         viewHolder.tvEmailValue.setText(userInfoList.get(i).getEmail());
         viewHolder.tvPhoneValue.setText(userInfoList.get(i).getPhone());
-
     }
 
     @Override

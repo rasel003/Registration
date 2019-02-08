@@ -9,6 +9,7 @@ public class AllUserResponse {
     private String Message, Status;
     private List<UserInfo> Data;
 
+
     public String getMessage() {
         return Message;
     }

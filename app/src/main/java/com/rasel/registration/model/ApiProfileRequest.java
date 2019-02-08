@@ -7,6 +7,7 @@ public class ApiProfileRequest {
     private Boolean Status;
     private UserId Data;
 
+
     public String getMessage() {
         return Message;
     }
