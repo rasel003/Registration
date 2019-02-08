@@ -72,6 +72,7 @@ public class Registration extends AppCompatActivity {
             if(imageBitmap!=null){
                 Toast.makeText(this, "Registration Successful", Toast.LENGTH_LONG).show();
                 Log.d(TAG, "btnSignUpClicked: Successful");
+                startActivity(new Intent(this, All_User.class));
             }else {
                 Toast.makeText(this, "Please capture a picture of you", Toast.LENGTH_SHORT).show();
             }

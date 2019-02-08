@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.rasel.registration.R;
 import com.rasel.registration.adapter.All_User_Adapter;
@@ -26,6 +27,7 @@ public class All_User extends AppCompatActivity {
 
    private RecyclerView recyclerView;
    private ProgressBar progressBar;
+   private TextView no_data;
 
     private static final String TAG = "All_User";
 
@@ -38,6 +40,8 @@ public class All_User extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         progressBar = findViewById(R.id.progressBar);
+        no_data = findViewById(R.id.no_data);
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -82,6 +86,7 @@ public class All_User extends AppCompatActivity {
             @Override
             public void onFailure(Call<AllUserResponse> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
+                no_data.setVisibility(View.VISIBLE);
                 Log.d(TAG, "onFailure: Item Response" + t.getMessage());
             }
         });

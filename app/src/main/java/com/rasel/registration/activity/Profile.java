@@ -11,18 +11,17 @@ import java.util.Objects;
 
 public class Profile extends AppCompatActivity {
     private static final String TAG = "Profile";
-    private TextView tvNameValue, tvEmailValue, tvAddressValue, tvPhoneValue, tvGenderValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        tvNameValue = findViewById(R.id.tvNameValue);
-        tvEmailValue = findViewById(R.id.tvEmailValue);
-        tvAddressValue = findViewById(R.id.tvAddressValue);
-        tvPhoneValue = findViewById(R.id.tvPhoneValue);
-        tvGenderValue = findViewById(R.id.tvGenderValue);
+        TextView tvNameValue = findViewById(R.id.tvNameValue);
+        TextView tvEmailValue = findViewById(R.id.tvEmailValue);
+        TextView tvAddressValue = findViewById(R.id.tvAddressValue);
+        TextView tvPhoneValue = findViewById(R.id.tvPhoneValue);
+        TextView tvGenderValue = findViewById(R.id.tvGenderValue);
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("Profile");
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -32,11 +31,27 @@ public class Profile extends AppCompatActivity {
             UserInfo userInfo = bundle.getParcelable("userInfo");
 
             if (userInfo != null) {
-                tvNameValue.setText(userInfo.getName());
-                tvEmailValue.setText(userInfo.getEmail());
-                tvAddressValue.setText(userInfo.getAddress());
-                tvPhoneValue.setText(userInfo.getPhone());
-                tvGenderValue.setText(userInfo.getGender());
+
+                String name = userInfo.getName();
+                String email = userInfo.getEmail();
+                String address = userInfo.getAddress();
+                String phone = userInfo.getPhone();
+                String gender = userInfo.getGender();
+                if(name !=null && !name.isEmpty()){
+                    tvNameValue.setText(userInfo.getName());
+                }
+                if(email != null && !email.isEmpty()){
+                    tvEmailValue.setText(userInfo.getEmail());
+                }
+                if(address != null && !address.isEmpty()){
+                    tvAddressValue.setText(userInfo.getAddress());
+                }
+                if(phone !=null && !phone.isEmpty()){
+                    tvPhoneValue.setText(userInfo.getPhone());
+                }
+                if(gender!=null && !gender.isEmpty()){
+                    tvGenderValue.setText(userInfo.getGender());
+                }
             }
         }
     }

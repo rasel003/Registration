@@ -16,6 +16,7 @@
     <string name="large_text">rasel rasel rasel rasel rasel rasel rasel rasel </string>
     <string name="registration">Registration</string>
     <string name="all_user">ALL USER</string>
+    <string name="no_data_found">No Data Found</string>
 
 
 </resources>
